@@ -1,0 +1,32 @@
+{
+    "name": "lack/mailscan",
+    "type": "project",
+    "description": "Mail scanning",
+    "keywords": ["Imap"],
+    "homepage": "https://infracamp.org",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Matthias Leuffen",
+            "email": "matthes@leuffen.de"
+        }
+    ],
+    "require": {
+        "php": ">=8.1"
+    },
+
+    "require-dev": {
+        "phore/tester": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Lack\\MailScan\\": "src"
+        },
+        "files": [
+        ]
+    },
+    "minimum-stability": "dev",
+    "config": {
+        "preferred-install": "source"
+    }
+}
