@@ -12,7 +12,9 @@
         }
     ],
     "require": {
-        "php": ">=8.1"
+        "php": ">=8.1",
+        "php-imap/php-imap": "^5.0.1",
+        "phore/objectstore": "*"
     },
 
     "require-dev": {
