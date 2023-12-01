@@ -2,7 +2,8 @@
 
 namespace Lack\MailScan\Config;
 
-class ServerConfig
+
+class ImapMailboxConfig
 {
 
     public string $imap_host;
