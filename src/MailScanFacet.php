@@ -26,8 +26,12 @@ class MailScanFacet
         foreach ($messageIds as $messageId) {
             $mailHeader = $this->imapDriver->mailbox->getMailHeader($messageId);
             echo "\nChecking: " . $mailHeader->subject  . "(From: {$mailHeader->fromAddress} To: {$mailHeader->toString})...";
-            if ( ! $mailStorage->needsSync($mailHeader))
+            if ( ! $mailStorage->needsSync($mailHeader)) {
+                echo "Skipped";
                 continue; // Skip already synced or not needed mails
+            }
+                
+            echo "\nSyncing...";
             $mailStorage->syncSingleMail($this->imapDriver->mailbox->getMail($messageId));
         }
 
