@@ -11,6 +11,10 @@ class ImapMailboxConfig
     public string $password;
 
 
+    public string $inboxFolder = "INBOX";
+
+    public string $sentFolder = "Sent";
+
     public static function LoadFromKeystore($file) {
         $data = phore_yaml_decode_file($file);
 
